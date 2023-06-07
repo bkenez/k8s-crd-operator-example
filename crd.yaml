@@ -1,0 +1,36 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: cats.example.crd.com
+spec:
+  group: example.crd.com
+  versions:
+  - name: v1
+    served: true
+    storage: true
+    schema:
+      openAPIV3Schema:
+        type: object
+        properties:
+          spec:
+            type: object
+            properties:
+              kind:
+                type: string
+              colour:
+                type: string    
+    additionalPrinterColumns:
+      - name: name
+        type: string
+        description: The name of the cat
+        jsonPath: .spec.name
+      - name: kind
+        type: string
+        description: The kind of the cat
+        jsonPath: .spec.kind
+  scope: Namespaced
+  names:
+    kind: Cat
+    listKind: CatList
+    plural: cats
+    singular: cat

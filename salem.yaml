@@ -1,0 +1,7 @@
+apiVersion: example.crd.com/v1
+kind: Cat
+metadata:
+  name: salem
+spec:
+  kind: "American Shorthair"
+  colour: Black

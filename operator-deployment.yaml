@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cat-operator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cat-operator
+  template:
+    metadata:
+      labels:
+        app: cat-operator
+    spec:
+      serviceAccountName: my-operator
+      containers:
+        - name: cat-operator
+          image: cat-operator:v1
+          imagePullPolicy: Never

@@ -20,10 +20,10 @@ spec:
               colour:
                 type: string    
     additionalPrinterColumns:
-      - name: name
+      - name: colour
         type: string
-        description: The name of the cat
-        jsonPath: .spec.name
+        description: The colour of the cat
+        jsonPath: .spec.colour
       - name: kind
         type: string
         description: The kind of the cat

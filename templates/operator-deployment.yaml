@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: cat-operator
 spec:
-  replicas: 1
+  replicas: {{ .Values.replicas }}
   selector:
     matchLabels:
       app: cat-operator
@@ -15,5 +15,5 @@ spec:
       serviceAccountName: my-operator
       containers:
         - name: cat-operator
-          image: cat-operator:v1
+          image: {{ .Values.image }}
           imagePullPolicy: Never

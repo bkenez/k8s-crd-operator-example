@@ -1,0 +1,4 @@
+apiVersion: v2
+name: cat-crd-chart
+version: 0.1.0
+description: A simple Helm chart for creating a cat CRD and an operator for it 

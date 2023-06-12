@@ -22,7 +22,7 @@ Follow these steps to deploy the CRD and Operator using the Helm chart:
 
    Replace `your-image-tag` with the desired tag for your Docker image.
 
-2. Set the image in values.yaml: Open the `values.yaml` file in the root directory of this Helm chart. Find the `operator.image.repository` and `operator.image.tag` fields and update them with the correct Docker image details. For example:
+2. Set the image in values.yaml: Open the `values.yaml` file in the root directory of this Helm chart. Find the `image` field and update it with the correct Docker image details. For example:
 
    ```yaml
     image: your-docker-repo/your-image:your-image-tag

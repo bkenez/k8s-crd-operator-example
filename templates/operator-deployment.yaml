@@ -16,4 +16,4 @@ spec:
       containers:
         - name: cat-operator
           image: {{ .Values.image }}
-          imagePullPolicy: Never
+          imagePullPolicy: IfNotPresent

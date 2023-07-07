@@ -1,3 +1,5 @@
+This is an example without any real functionality, simply for showcasing a pattern.
+
 # Example Helm Chart for CRD and Operator Deployment
 
 This Helm chart allows you to deploy a Custom Resource Definition (CRD) and an Operator to a Kubernetes cluster. The Operator's job is to create a pod whenever an instance of the custom resource is created, as well as to delete the pod when the corresponding instance is deleted.
